@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Osman Zor | Yiyecek İçecek İşletmeciliği</title>
+
+    <!-- Fontlar: Playfair Display (Editoryal Serif) & Outfit (Modern Sans) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,500;0,700;1,500&display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <!-- Fareyi takip eden yumuşak bronz ışık -->
+    <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+    <!-- Üst Menü -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-inner">
+            <a href="#ana-sayfa" class="logo">
+                <span class="logo-mark">OZ</span>
+                <span class="logo-dot"></span>
+            </a>
+
+            <nav class="nav-menu" id="navMenu" aria-label="Ana Navigasyon">
+                <a href="#ana-sayfa" class="nav-link active">Ana Sayfa</a>
+                <a href="#hakkimda" class="nav-link">Hakkımda</a>
+                <a href="#deneyim" class="nav-link">Deneyim</a>
+                <a href="#egitim" class="nav-link">Eğitim</a>
+                <a href="#galeri" class="nav-link">Galeri</a>
+            </nav>
+
+            <div class="nav-controls">
+                <!-- İkon tabanlı çift tema düğmesi (metinsiz) -->
+                <button type="button" class="theme-btn" id="themeToggle" aria-label="Temayı değiştir"
+                    title="Temayı değiştir">
+                    <!-- Güneş ikonu (Koyu temada görünür) -->
+                    <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="4"></circle>
+                        <path
+                            d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41">
+                        </path>
+                    </svg>
+                    <!-- Ay ikonu (Açık temada görünür) -->
+                    <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+
+                <!-- Mobil Menü Düğmesi -->
+                <button type="button" class="hamburger" id="hamburger" aria-label="Menüyü aç" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO BÖLÜMÜ -->
+    <main>
+        <section class="hero" id="ana-sayfa">
+            <!-- Arka plan büyük filigran yazı -->
+            <div class="hero-watermark" aria-hidden="true">OSMAN ZOR</div>
+
+            <div class="container hero-wrapper">
+                <!-- Üst Editoryal Bilgi Şeridi -->
+                <div class="hero-topbar reveal">
+                    <span class="meta-index">01 / PORTFOLYO</span>
+                    <span class="meta-line"></span>
+                    <span class="meta-location">MUĞLA, TÜRKİYE</span>
+                </div>
+
+                <!-- Ana 2 Sütunlu Grid -->
+                <div class="hero-grid">
+                    <!-- Sol: Tipografi ve Giriş -->
+                    <div class="hero-text">
+                        <p class="hero-kicker reveal" style="--delay: 0.08s">
+                            Yiyecek &amp; İçecek İşletmeciliği
+                        </p>
+
+                        <h1 class="hero-heading">
+                            <span class="line-mask">
+                                <span class="line-inner" style="--delay: 0.16s">Osman</span>
+                            </span>
+                            <span class="line-mask">
+                                <span class="line-inner accent-italic" style="--delay: 0.28s">Zor</span>
+                            </span>
+                        </h1>
+
+                        <div class="hero-lead reveal" style="--delay: 0.38s">
+                            <p>
+                                Yiyecek ve İçecek İşletmeciliği 3. sınıf öğrencisiyim. Misafir memnuniyeti,
+                                kaliteli hizmet anlayışı ve ekip uyumuyla insanlara özenli deneyimler sunmayı
+                                hedefliyorum.
+                            </p>
+                        </div>
+
+                        <div class="hero-cta reveal" style="--delay: 0.48s">
+                            <a href="#hakkimda" class="btn-solid">
+                                <span>Beni Tanıyın</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M5 12h14M13 5l7 7-7 7" />
+                                </svg>
+                            </a>
+                            <a href="#galeri" class="btn-ghost">Galeriye Git</a>
+                        </div>
+                    </div>
+
+                    <!-- Sağ: Köşe Kadrajlı Editoryal Portre -->
+                    <div class="hero-media reveal" style="--delay: 0.25s">
+                        <div class="editorial-frame" id="editorialFrame">
+                            <!-- Köşe kadraj işaretleri -->
+                            <span class="corner tl" aria-hidden="true"></span>
+                            <span class="corner tr" aria-hidden="true"></span>
+                            <span class="corner bl" aria-hidden="true"></span>
+                            <span class="corner br" aria-hidden="true"></span>
+
+                            <div class="photo-box">
+                                <!-- Kendi fotoğrafınızı images/osman.jpg yoluna ekleyin -->
+                                <img src="images/profil.jpeg" alt="Osman Zor" />
+                            </div>
+
+                            <!-- Alt bilgi şeridi -->
+                            <div class="frame-footer">
+                                <div>
+                                    <span class="frame-label">Muğla Sıtkı Koçman Üni.</span>
+                                    <span class="frame-sub">3. Sınıf • İngilizce (B1)</span>
+                                </div>
+                                <span class="frame-year">2026</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Alt Kayan Disiplin Şeridi -->
+                <div class="marquee-wrap reveal" style="--delay: 0.58s" aria-hidden="true">
+                    <div class="marquee-track">
+                        <span>Misafir Memnuniyeti</span>
+                        <span class="sep">◆</span>
+                        <span>Kaliteli Hizmet Anlayışı</span>
+                        <span class="sep">◆</span>
+                        <span>Ekip Uyumu</span>
+                        <span class="sep">◆</span>
+                        <span>Çözüm Odaklı Yaklaşım</span>
+                        <span class="sep">◆</span>
+                        <span>Muğla Menteşe Öğretmen Evi</span>
+                        <span class="sep">◆</span>
+                        <!-- Kesintisiz döngü için tekrar -->
+                        <span>Misafir Memnuniyeti</span>
+                        <span class="sep">◆</span>
+                        <span>Kaliteli Hizmet Anlayışı</span>
+                        <span class="sep">◆</span>
+                        <span>Ekip Uyumu</span>
+                        <span class="sep">◆</span>
+                        <span>Çözüm Odaklı Yaklaşım</span>
+                        <span class="sep">◆</span>
+                        <span>Muğla Menteşe Öğretmen Evi</span>
+                        <span class="sep">◆</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- =========================================
+         2. BÖLÜM: HAKKIMDA
+         ========================================= -->
+        <section class="section about" id="hakkimda">
+            <div class="container">
+                <!-- Bölüm Üst Şeridi -->
+                <div class="section-topbar scroll-reveal">
+                    <span class="meta-index">02 / HAKKIMDA</span>
+                    <span class="meta-line"></span>
+                    <span class="meta-location">KİŞİSEL PROFİL</span>
+                </div>
+
+                <div class="about-grid">
+                    <!-- Sol Sütun: Sabit Başlık, Alıntı ve Hızlı Bilgiler -->
+                    <div class="about-side scroll-reveal">
+                        <h2 class="section-heading">
+                            İnsan odaklı hizmet,<br />
+                            <span class="accent-italic">disiplinli yaklaşım.</span>
+                        </h2>
+
+                        <blockquote class="about-quote">
+                            “Bu alan yalnızca yiyecek ve içecek hizmetlerinden ibaret değil; misafir memnuniyeti,
+                            kaliteli hizmet anlayışı ve insanlara güzel deneyimler sunma sanatıdır.”
+                        </blockquote>
+
+                        <div class="info-list">
+                            <div class="info-row">
+                                <span class="info-key">Konum</span>
+                                <span class="info-val">Muğla, Türkiye</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-key">Yabancı Dil</span>
+                                <span class="info-val">İngilizce (B1)</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-key">Telefon</span>
+                                <button type="button" class="info-copy" data-copy="+90 554 144 7837">
+                                    <span>+90 554 144 7837</span>
+                                    <small class="copy-hint">Kopyala</small>
+                                </button>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-key">E-posta</span>
+                                <button type="button" class="info-copy" data-copy="o.zor_46@hotmail.com">
+                                    <span>o.zor_46@hotmail.com</span>
+                                    <small class="copy-hint">Kopyala</small>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sağ Sütun: Biyografi Metni ve 4 Temel Değer -->
+                    <div class="about-body">
+                        <div class="about-prose scroll-reveal">
+                            <p class="drop-cap">
+                                Yiyecek ve İçecek İşletmeciliği bölümünde 3. sınıf öğrencisi olarak eğitimime
+                                devam etmekteyim. Daha önce İlahiyat Fakültesinden mezun oldum ve aynı zamanda
+                                kamu kurumunda memur olarak görev yapmaktayım. Farklı alanlarda edindiğim eğitim
+                                ve iş tecrübelerinin, kişisel gelişimime ve mesleki bakış açıma önemli katkılar
+                                sağladığına inanıyorum.
+                            </p>
+                            <p>
+                                İnsan ilişkilerine verdiğim önem, iletişim kurma becerim ve insanlarla bir arada
+                                çalışmaktan duyduğum memnuniyet, Yiyecek ve İçecek İşletmeciliği bölümünü tercih
+                                etmemde etkili olmuştur. Bu alanın yalnızca yiyecek ve içecek hizmetlerinden ibaret
+                                olmadığını; aynı zamanda misafir memnuniyeti, kaliteli hizmet anlayışı, ekip uyumu
+                                ve insanlara güzel deneyimler sunmayı kapsadığını düşünüyorum.
+                            </p>
+                            <p>
+                                Kendimi bu alanda geliştirmeye, yeni bilgiler edinmeye ve mesleki açıdan ilerlemeye
+                                oldukça hevesliyim. Takım çalışmasına yatkın, görev bilinci ve sorumluluk duygusu
+                                yüksek, verilen işleri özenle yerine getirmeye gayret eden biriyim. İnsanlarla
+                                sağlıklı iletişim kurmaya, ekip arkadaşlarımla uyum içerisinde çalışmaya ve
+                                karşılaştığım durumlarda çözüm odaklı yaklaşmaya önem veririm.
+                            </p>
+                            <p>
+                                Eğitimim ve mevcut iş tecrübem doğrultusunda edindiğim bilgi ve becerileri
+                                birleştirerek yiyecek ve içecek sektöründe kendime sağlam bir yer edinmeyi
+                                hedefliyorum. Öğrenmeye açık yapım, çalışma azmim ve gelişime olan isteğimle hem
+                                kendime hem de içinde bulunduğum kurumlara katkı sağlayabileceğime inanıyorum.
+                            </p>
+                        </div>
+
+                        <!-- 4 Temel Değer Izgarası -->
+                        <div class="pillars-grid scroll-reveal">
+                            <article class="pillar-card">
+                                <span class="pillar-num">01</span>
+                                <h3>Misafir Memnuniyeti</h3>
+                                <p>Kaliteli hizmet anlayışıyla her misafire özenli ve sıcak bir deneyim sunma.</p>
+                            </article>
+
+                            <article class="pillar-card">
+                                <span class="pillar-num">02</span>
+                                <h3>Güçlü İletişim</h3>
+                                <p>İnsan ilişkilerine dayalı, açık, saygılı ve sağlıklı iletişim kurabilme.</p>
+                            </article>
+
+                            <article class="pillar-card">
+                                <span class="pillar-num">03</span>
+                                <h3>Ekip Uyumu</h3>
+                                <p>Takım çalışmasına yatkın, ortak hedef doğrultusunda uyumlu çalışma disiplini.</p>
+                            </article>
+
+                            <article class="pillar-card">
+                                <span class="pillar-num">04</span>
+                                <h3>Çözüm Odaklılık</h3>
+                                <p>Yüksek görev bilinci, sorumluluk duygusu ve karşılaşılan durumlarda pratik çözümler.
+                                </p>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- =========================================
+         3. BÖLÜM: DENEYİM
+         ========================================= -->
+        <section class="section experience" id="deneyim">
+            <div class="container">
+                <!-- Bölüm Üst Şeridi -->
+                <div class="section-topbar scroll-reveal">
+                    <span class="meta-index">03 / DENEYİM</span>
+                    <span class="meta-line"></span>
+                    <span class="meta-location">SAHA &amp; KURUMSAL TECRÜBE</span>
+                </div>
+
+                <div class="exp-header scroll-reveal">
+                    <h2 class="section-heading">
+                        Sahada kazanılan <span class="accent-italic">pratik tecrübe.</span>
+                    </h2>
+                </div>
+
+                <!-- 1. KART: STAJ DENEYİMİ (GÖRSELLİ + KONUMLU) -->
+                <article class="exp-featured scroll-reveal">
+                    <!-- Sol: Detaylar ve 4 Görev Alanı -->
+                    <div class="exp-featured-content">
+                        <div class="exp-badges">
+                            <span class="badge-accent">Staj Deneyimi</span>
+                            <span class="badge-outline">2026</span>
+                        </div>
+
+                        <h3 class="exp-title">Muğla Menteşe Öğretmen Evi</h3>
+
+                        <div class="exp-location-row">
+                            <div class="exp-location">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                                <span>Emirbeyazıt, Cumhuriyet Cd. No:2/B • Menteşe, Muğla</span>
+                            </div>
+
+                            <a href="https://www.google.com/maps/search/?api=1&query=Mu%C4%9Fla+Mente%C5%9Fe+%C3%96%C4%9Fretmenevi+ve+Ak%C5%9Fam+Sanat+Okulu&query_place_id=ChIJXZk3dnZyvxQRR0DWwwrcQlE"
+                                target="_blank" rel="noopener noreferrer" class="map-btn">
+                                <span>Haritada Aç</span>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M7 17L17 7M7 7h10v10" />
+                                </svg>
+                            </a>
+                        </div>
+
+                        <p class="exp-desc">
+                            Yiyecek ve İçecek İşletmeciliği eğitimim kapsamında gerçekleştirdiğim staj süresince
+                            işletmenin farklı departmanlarında aktif görev alarak servis, mutfak ve organizasyon
+                            süreçlerini yerinde deneyimledim.
+                        </p>
+
+                        <!-- Stajda Yapılan 4 Görev -->
+                        <div class="duties-block">
+                            <span class="duties-label">Üstlenilen Görevler</span>
+                            <div class="duties-grid">
+                                <div class="duty-item">
+                                    <span class="duty-dot"></span>
+                                    <div>
+                                        <strong>Ocak</strong>
+                                        <span>Sıcak içecek ve ocak servis hazırlığı</span>
+                                    </div>
+                                </div>
+                                <div class="duty-item">
+                                    <span class="duty-dot"></span>
+                                    <div>
+                                        <strong>Kasiyerlik</strong>
+                                        <span>Adisyon, ödeme ve kasa takibi</span>
+                                    </div>
+                                </div>
+                                <div class="duty-item">
+                                    <span class="duty-dot"></span>
+                                    <div>
+                                        <strong>Düğün &amp; Davet</strong>
+                                        <span>Organizasyon ve toplu davet servisi</span>
+                                    </div>
+                                </div>
+                                <div class="duty-item">
+                                    <span class="duty-dot"></span>
+                                    <div>
+                                        <strong>Garsonluk</strong>
+                                        <span>Misafir karşılama ve masa servisi</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sağ: Muğla Menteşe Öğretmen Evi Görseli -->
+                    <div class="exp-featured-media">
+                        <div class="exp-photo-frame">
+                            <span class="corner tl" aria-hidden="true"></span>
+                            <span class="corner tr" aria-hidden="true"></span>
+                            <span class="corner bl" aria-hidden="true"></span>
+                            <span class="corner br" aria-hidden="true"></span>
+
+                            <div class="exp-photo-box">
+                                <!-- Öğretmen Evi görselini images/ogretmenevi.jpg olarak ekleyin -->
+                                <img src="images/ogretmenevi.jpeg" alt="Muğla Menteşe Öğretmen Evi" />
+                            </div>
+
+                            <div class="exp-photo-caption">
+                                <span>Öğretmen Evi</span>
+                                <span>Menteşe / Muğla</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 2. KART: DEVLET MEMURLUĞU (GÖRSELSİZ, SADE EDİTORYAL SATIR) -->
+                <article class="exp-secondary scroll-reveal">
+                    <div class="exp-sec-left">
+                        <span class="exp-sec-period">2012 – Devam Ediyor</span>
+                        <h3 class="exp-sec-title">Devlet Memurluğu</h3>
+                        <span class="exp-sec-org">Kamu Kurumu</span>
+                    </div>
+
+                    <div class="exp-sec-right">
+                        <p>
+                            Uzun yıllardır sürdürdüğüm kamu görevi sayesinde yüksek görev bilinci, kurumsal
+                            iletişim disiplini, sorumluluk alma ve yoğun süreçlerde çözüm odaklı hareket etme
+                            alışkanlığı kazandım.
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <!-- =========================================
+         4. BÖLÜM: EĞİTİM
+         ========================================= -->
+        <section class="section education" id="egitim">
+            <div class="container">
+                <!-- Bölüm Üst Şeridi -->
+                <div class="section-topbar scroll-reveal">
+                    <span class="meta-index">04 / EĞİTİM</span>
+                    <span class="meta-line"></span>
+                    <span class="meta-location">AKADEMİK GEÇMİŞ</span>
+                </div>
+
+                <div class="edu-header scroll-reveal">
+                    <h2 class="section-heading">
+                        Akademik temel ve <span class="accent-italic">sürekli gelişim.</span>
+                    </h2>
+                </div>
+
+                <!-- 2 Sütunlu Lisans Kartları -->
+                <div class="edu-grid">
+                    <!-- 1. Lisans: Muğla Sıtkı Koçman Üniversitesi -->
+                    <article class="edu-card edu-card--active scroll-reveal">
+                        <div class="edu-card-top">
+                            <span class="edu-period">2024 – Devam Ediyor</span>
+                            <span class="edu-status edu-status--active">3. Sınıf</span>
+                        </div>
+
+                        <span class="edu-degree">Lisans Derecesi</span>
+                        <h3 class="edu-title">Yiyecek İçecek İşletmeciliği</h3>
+                        <p class="edu-school">Muğla Sıtkı Koçman Üniversitesi</p>
+
+                        <div class="edu-line" aria-hidden="true"></div>
+
+                        <p class="edu-note">
+                            Misafir memnuniyeti, servis yönetimi, ekip koordinasyonu ve yiyecek-içecek
+                            işletmeciliği odağında lisans eğitimime devam etmekteyim.
+                        </p>
+                    </article>
+
+                    <!-- 2. Lisans: Dicle Üniversitesi -->
+                    <article class="edu-card scroll-reveal">
+                        <div class="edu-card-top">
+                            <span class="edu-period">2009 – 2013</span>
+                            <span class="edu-status">Mezun</span>
+                        </div>
+
+                        <span class="edu-degree">Lisans Derecesi</span>
+                        <h3 class="edu-title">İlahiyat</h3>
+                        <p class="edu-school">Dicle Üniversitesi İlahiyat Fakültesi</p>
+
+                        <div class="edu-line" aria-hidden="true"></div>
+
+                        <p class="edu-note">
+                            İnsan ilişkileri, iletişim becerileri ve disiplinli çalışma kültürü açısından
+                            kişisel ve mesleki bakış açıma temel oluşturan ilk lisans eğitimim.
+                        </p>
+                    </article>
+                </div>
+
+                <!-- Yabancı Dil Şeridi -->
+                <div class="lang-bar scroll-reveal">
+                    <div class="lang-info">
+                        <span class="lang-kicker">Yabancı Dil</span>
+                        <div class="lang-name-row">
+                            <strong>İngilizce</strong>
+                            <span class="lang-badge">B1 — Orta Seviye</span>
+                        </div>
+                    </div>
+
+                    <!-- A1 - C2 Seviye Göstergesi (B1 = 3/6) -->
+                    <div class="lang-meter" aria-label="İngilizce B1 seviyesi">
+                        <span class="meter-step filled" title="A1"><i>A1</i></span>
+                        <span class="meter-step filled" title="A2"><i>A2</i></span>
+                        <span class="meter-step filled current" title="B1"><i>B1</i></span>
+                        <span class="meter-step" title="B2"><i>B2</i></span>
+                        <span class="meter-step" title="C1"><i>C1</i></span>
+                        <span class="meter-step" title="C2"><i>C2</i></span>
+                    </div>
+                </div>
+
+                <!-- Sertifikalar: Şu an boş bırakıldı, ileride eklenebilir -->
+            </div>
+        </section>
+        <!-- =========================================
+         5. BÖLÜM: GALERİ (6 FOTOĞRAF + LIGHTBOX)
+         ========================================= -->
+        <section class="section gallery" id="galeri">
+            <div class="container">
+                <!-- Bölüm Üst Şeridi -->
+                <div class="section-topbar scroll-reveal">
+                    <span class="meta-index">05 / GALERİ</span>
+                    <span class="meta-line"></span>
+                    <span class="meta-location">SEÇİLİ KARELER</span>
+                </div>
+
+                <div class="gallery-header scroll-reveal">
+                    <h2 class="section-heading">
+                        Anlardan <span class="accent-italic">kareler.</span>
+                    </h2>
+                    <p class="gallery-sub">Büyütmek için herhangi bir fotoğrafa dokunun.</p>
+                </div>
+
+                <!-- Asimetrik Editoryal Galeri Grid (6 Fotoğraf) -->
+                <div class="gallery-grid scroll-reveal" id="galleryGrid">
+                    <button type="button" class="gallery-item span-5" data-index="0"
+                        aria-label="Galeri fotoğrafı 1'i büyüt">
+                        <img src="images/galeri1.jpeg" alt="Osman Zor Galeri 1" loading="lazy" />
+                        <span class="gallery-overlay">
+                            <span class="gallery-num">01</span>
+                            <span class="gallery-zoom" aria-hidden="true">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.8">
+                                    <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                                </svg>
+                            </span>
+                        </span>
+                    </button>
+
+                    <button type="button" class="gallery-item span-4" data-index="1"
+                        aria-label="Galeri fotoğrafı 2'yi büyüt">
+                        <img src="images/galeri2.jpeg" alt="Osman Zor Galeri 2" loading="lazy" />
+                        <span class="gallery-overlay">
+                            <span class="gallery-num">02</span>
+                            <span class="gallery-zoom" aria-hidden="true">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.8">
+                                    <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                                </svg>
+                            </span>
+                        </span>
+                    </button>
+
+                    <button type="button" class="gallery-item span-3" data-index="2"
+                        aria-label="Galeri fotoğrafı 3'ü büyüt">
+                        <img src="images/galeri3.jpeg" alt="Osman Zor Galeri 3" loading="lazy" />
+                        <span class="gallery-overlay">
+                            <span class="gallery-num">03</span>
+                            <span class="gallery-zoom" aria-hidden="true">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.8">
+                                    <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                                </svg>
+                            </span>
+                        </span>
+                    </button>
+
+                    <button type="button" class="gallery-item span-3" data-index="3"
+                        aria-label="Galeri fotoğrafı 4'ü büyüt">
+                        <img src="images/galeri4.jpeg" alt="Osman Zor Galeri 4" loading="lazy" />
+                        <span class="gallery-overlay">
+                            <span class="gallery-num">04</span>
+                            <span class="gallery-zoom" aria-hidden="true">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.8">
+                                    <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                                </svg>
+                            </span>
+                        </span>
+                    </button>
+
+                    <button type="button" class="gallery-item span-4" data-index="4"
+                        aria-label="Galeri fotoğrafı 5'i büyüt">
+                        <img src="images/galeri5.jpeg" alt="Osman Zor Galeri 5" loading="lazy" />
+                        <span class="gallery-overlay">
+                            <span class="gallery-num">05</span>
+                            <span class="gallery-zoom" aria-hidden="true">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.8">
+                                    <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                                </svg>
+                            </span>
+                        </span>
+                    </button>
+
+                    <button type="button" class="gallery-item span-5" data-index="5"
+                        aria-label="Galeri fotoğrafı 6'yı büyüt">
+                        <img src="images/galeri6.jpeg" alt="Osman Zor Galeri 6" loading="lazy" />
+                        <span class="gallery-overlay">
+                            <span class="gallery-num">06</span>
+                            <span class="gallery-zoom" aria-hidden="true">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.8">
+                                    <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                                </svg>
+                            </span>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Minimal Kapanış Şeridi -->
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>© 2026 Osman Zor — Yiyecek İçecek İşletmeciliği</p>
+            <a href="#ana-sayfa" class="back-top">
+                <span>Yukarı Çık</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 19V5M5 12l7-7 7 7" />
+                </svg>
+            </a>
+        </div>
+    </footer>
+
+    <!-- LIGHTBOX PENCERESİ (Masaüstü & Mobil Dokunmatik Destekli) -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Fotoğraf Önizleme"
+        aria-hidden="true">
+        <div class="lightbox-top">
+            <span class="lightbox-counter" id="lightboxCounter">01 / 06</span>
+            <button type="button" class="lightbox-close" id="lightboxClose" aria-label="Kapat">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path d="M18 6L6 18M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+
+        <div class="lightbox-stage" id="lightboxStage">
+            <button type="button" class="lightbox-nav prev" id="lightboxPrev" aria-label="Önceki fotoğraf">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path d="M15 18l-6-6 6-6" />
+                </svg>
+            </button>
+
+            <div class="lightbox-img-wrap">
+                <img src="" alt="" id="lightboxImg" />
+            </div>
+
+            <button type="button" class="lightbox-nav next" id="lightboxNext" aria-label="Sonraki fotoğraf">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path d="M9 18l6-6-6-6" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Alt Küçük Önizleme (Thumbnail) Şeridi -->
+        <div class="lightbox-thumbs" id="lightboxThumbs" aria-label="Fotoğraf seçimi"></div>
+    </div>
+    <!-- Sonraki adımlarda buraya Hakkımda, Deneyim, Eğitim ve Galeri eklenecek -->
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
